@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hover Effect on Each Letter</title>
+    <style>
+        /* Basic reset and full-page styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body, html {
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #ADD8E6; /* Light Blue background color */
+        }
+
+        /* Styling for the name container */
+        .name {
+            font-size: 50px;
+            font-family: Arial, sans-serif;
+            display: inline-block;
+            text-align: center;
+        }
+
+        /* Styling for each letter */
+        .letter {
+            display: inline-block;
+            transition: transform 0.3s ease, font-size 0.3s ease;
+        }
+
+        /* Individual letter hover effects */
+        .letter:hover {
+            transform: scale(1.5);
+            font-size: 70px;  /* Increases the font size on hover */
+        }
+
+        /* Different colors for each letter */
+        .letter:nth-child(1) { color: #FF6347; } /* Red */
+        .letter:nth-child(2) { color: #4682B4; } /* Blue */
+        .letter:nth-child(3) { color: #32CD32; } /* Green */
+        .letter:nth-child(4) { color: #FFD700; } /* Yellow */
+        .letter:nth-child(5) { color: #8A2BE2; } /* Purple */
+        .letter:nth-child(6) { color: #FF4500; } /* Orange */
+        .letter:nth-child(7) { color: #2E8B57; } /* Sea Green */
+        .letter:nth-child(9) { color: #DC143C; } /* Crimson */
+        .letter:nth-child(10) { color: #1E90FF; } /* Dodger Blue */
+        .letter:nth-child(11) { color: #A52A2A; } /* Brown */
+        .letter:nth-child(12) { color: #8B008B; } /* Dark Magenta */
+        .letter:nth-child(13) { color: #FF1493; } /* Deep Pink */
+    </style>
+</head>
+<body>
+    <h1 class="name">
+        <span class="letter">B</span>
+        <span class="letter">h</span>
+        <span class="letter">a</span>
+        <span class="letter">r</span>
+        <span class="letter">a</span>
+        <span class="letter">t</span>
+        <span class="letter">h</span>
+        <span class="letter"> </span>
+        <span class="letter">K</span>
+        <span class="letter">u</span>
+        <span class="letter">m</span>
+        <span class="letter">a</span>
+        <span class="letter">r</span>
+    </h1>
+</body>
+</html>

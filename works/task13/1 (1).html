@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bharath's Info</title>
+</head>
+<body>
+    <input type="text" id="name" placeholder="Enter Name">
+
+    <input type="number" id="age" placeholder="Enter Age ">
+
+    <input type="text" id="profession" placeholder="Enter Profession"><br>
+
+    <input type="text" id="hobby" placeholder="Enter Hobby"><br>
+
+    <button onclick="updateInfo()">Insert Info</button>
+
+    <h3>Info:</h3>
+    <div id="demo_div"></div>
+    <button onclick="showInfo()">Show Info</button>
+
+    <script>
+        
+        let records = [];
+
+        function updateInfo() {
+            let record = {
+                name: document.getElementById("name").value || "N/A",
+                age: document.getElementById("age").value || "N/A",
+                profession: document.getElementById("profession").value || "N/A",
+                hobby: document.getElementById("hobby").value || "N/A"
+            };
+
+           
+            records.push(record);
+            alert("Information updated successfully!");
+
+            
+            document.getElementById("name").value = '';
+            document.getElementById("age").value = '';
+            document.getElementById("profession").value = '';
+            document.getElementById("hobby").value = '';
+        }
+
+        
+        function showInfo() {
+            let infoText = "";
+            for (let i = 0; i < records.length; i++) {
+                infoText += " Record : " + (i + 1);
+                infoText += " Name: " + records[i].name ;
+                infoText += " Age: " + records[i].age ;
+                infoText += " Profession: " + records[i].profession ;
+                infoText += " Hobby: " + records[i].hobby + "<br><br>";
+            }
+            document.getElementById("demo_div").innerHTML = infoText;
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <title>random numbers generator</title>
+
+    </head>
+<body>
+    
+    <script>
+        function generateRandomNumber() {
+            
+            const a = parseInt(document.getElementById("num1").value);
+            const b = parseInt(document.getElementById("num2").value);
+
+            
+            if (isNaN(a) || isNaN(b)) {
+                alert("Please enter valid numbers.");
+                return;
+            }
+
+            
+            const randomNumber = Math.floor(Math.random() * (b - a + 1)) + a;
+
+            
+            document.getElementById("result").innerText = "Random number "+ randomNumber;
+        }
+    </script>
+    
+    
+    <input placeholder="enter number_1" id="num1">
+
+    
+    <input placeholder="enter number_2" id="num2"><br><br>
+
+    <button onclick="generateRandomNumber()">Generate Random Number</button>
+    
+    <p id="result"></p>
+
+
+</body>
+</html>

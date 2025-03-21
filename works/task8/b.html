@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task 8</title>
+    <style>
+        #input_field {
+            display: inline-block;
+        }
+        #output_field {
+            display: inline-block;
+        }
+    </style>
+    <script>
+        function convertToUppercase() {
+            var aF = document.getElementById("input_field");
+            var iF = document.getElementById("output_field");
+            iF.value = aF.value.toUpperCase();
+        }
+    </script>
+</head>
+<body>
+    <input id="input_field" placeholder="Input Text" onkeyup="convertToUppercase()"/>
+    <input id="output_field" placeholder="Output Text" disabled/>
+</body>
+</html>

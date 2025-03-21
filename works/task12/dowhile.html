@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <input id="input_a" placeholder="enter A"/>
+        <input id="input_b" placeholder="enter B" />
+        <button onclick="calculate()">submit</button>
+        <div id="output_span"></div>
+        <script>
+            function calculate(){
+                let a = parseInt(document.getElementById("input_a").value);
+                let b = parseInt(document.getElementById("input_b").value);
+                let sum = 0;
+                
+                let i = a;
+                // Start of the do-while loop
+                do {
+                    sum += i; // Add the current value of i to the sum
+                    i++; // Increment i to go to the next number
+                } while (i <= b); // Continue looping while i is less than or equal to b
+
+                document.getElementById("output_span").innerHTML = "The sum is: " + sum;
+                // Fixing color style (you may define a proper color)
+                document.getElementById("output_span").style = "color: blue";
+            }
+        </script>
+    </body>
+</html>
